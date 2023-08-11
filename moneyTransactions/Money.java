@@ -11,8 +11,7 @@ public class Money {
         return amount;
     }
 
-    public Money add(Money money) {
-        BankInt bank = new Bank();
+    public Money add(Money money, Bank bank) {
         int rate = bank.getRate(this.currency, money.currency);
 
         int newAmount = amount + money.getAmount()/rate;
